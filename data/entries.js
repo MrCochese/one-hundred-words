@@ -1,9 +1,4 @@
-var entries = [{
-	words: 'Blah blah blah'
-},
-{
-	words: 'Yackety Smackety'
-}];
+var entries = [];
 
 exports.list = function() {
 	return entries;
