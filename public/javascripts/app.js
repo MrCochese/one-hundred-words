@@ -1,11 +1,11 @@
 $(function() {
 	$('#words').on('change keyup paste', function(e) {
-		$wordcount = $('#wordcount');
-		$this = $(this);
+		var $wordcount = $('#wordcount');
+		var $this = $(this);
 
-		var count = $(this).val().match(/\W/g).length;
+		var matches = $this.val().match(/\S+/g);
 
-		$wordcount.html(count);
+		$wordcount.html(matches ? matches.length : 0);
 	});
 });
 
