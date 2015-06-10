@@ -1,13 +1,16 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-
-<form action="POST">
+<form method="POST">
 	<div>
 	    <label for="words">Today's Words</label>
-	    <textarea id="words" name="words"></textarea>
+	    <textarea id="words" name="words">{{words}}</textarea>
 	    <span id="wordcount">0</span>
 	</div>
 	<div>
 		<button>Submit</button>
 	</div>
 </form>
+
+<ul>
+	{{#each entries}}
+		<li>{{words}}</li>
+	{{/each}}
+</ul>
